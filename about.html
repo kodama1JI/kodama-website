@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark" data-page="about">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0B0D0F">
+  <script src="js/boot.js"></script>
+  <title>Kodama | About</title>
+  <meta name="description" content="Kodama is a software studio focused on turning ideas into useful, reliable, and well-crafted digital products.">
+  <link rel="canonical" href="about.html">
+  <meta property="og:title" content="Kodama | About">
+  <meta property="og:description" content="Kodama is a software studio focused on turning ideas into useful, reliable, and well-crafted digital products.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/logo/Kodama.png">
+  <link rel="icon" href="assets/logo/Kodama.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <noscript>
+    <style>
+      .reveal { opacity: 1; transform: none; }
+      .nav-toggle { display: none; }
+      .nav-panel { display: flex; position: static; transform: none; width: auto; height: auto; padding: 0; background: transparent; border: 0; }
+    </style>
+  </noscript>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="ui.skip">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary" data-i18n-aria-label="ui.primaryNav">
+      <a href="index.html" class="nav-brand">
+        <span class="nav-logo">
+          <img src="assets/logo/Kodama.png" alt="Kodama">
+        </span>
+      </a>
+      <div class="nav-actions">
+        <div class="lang-switch" role="group" data-i18n-aria-label="ui.language">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="ar" aria-pressed="false">AR</button>
+        </div>
+        <button type="button" class="theme-toggle" aria-pressed="false" data-i18n-aria-label="ui.themeToLight">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 3v1.6M12 19.4V21M4.93 4.93l1.13 1.13M17.94 17.94l1.13 1.13M3 12h1.6M19.4 12H21M4.93 19.07l1.13-1.13M17.94 6.06l1.13-1.13"/>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M16.2 3.8A8.4 8.4 0 1 0 20.2 15 6.8 6.8 0 0 1 16.2 3.8z"/>
+          </svg>
+        </button>
+      </div>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-menu" data-i18n-aria-label="ui.openMenu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <div class="nav-panel" id="primary-menu">
+        <ul class="nav-links">
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+          <li><a href="projects.html" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="about.html" aria-current="page" data-i18n="nav.about">About</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+        <a class="btn btn-primary nav-cta nav-cta-mobile" href="contact.html" data-i18n="nav.cta">Start a Project</a>
+      </div>
+      <a class="btn btn-primary nav-cta nav-cta-desktop" href="contact.html" data-i18n="nav.cta">Start a Project</a>
+    </nav>
+  </header>
+  <div class="nav-overlay" hidden></div>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container reveal">
+        <span class="eyebrow" data-i18n="aboutPage.eyebrow">About</span>
+        <h1 data-i18n="aboutPage.title">Technology with intention.</h1>
+        <p data-i18n="aboutPage.lead">Kodama is a software studio focused on turning ideas into useful, reliable, and well-crafted digital products.</p>
+      </div>
+    </section>
+
+    <section class="container">
+      <article class="split-block">
+        <h2 class="reveal" data-i18n="aboutPage.storyTitle">Our story</h2>
+        <div class="split-copy reveal reveal-delay-1">
+          <p data-i18n="aboutPage.story1">Kodama exists to help people and businesses turn ideas into working software. We treat every project as a product: something that has to be clear, maintainable, and worth using.</p>
+          <p data-i18n="aboutPage.story2">The studio works across mobile applications, websites, backend systems, and custom software. The through-line is the same — understand the problem, choose the right shape for the solution, and build it with care.</p>
+        </div>
+      </article>
+
+      <article class="split-block">
+        <h2 class="reveal" data-i18n="aboutPage.approachTitle">Our approach</h2>
+        <div class="split-copy reveal reveal-delay-1">
+          <p data-i18n="aboutPage.approach1">We start by understanding the problem — who it is for, what has to happen, and which constraints actually matter. That keeps the work focused before a single screen is designed.</p>
+          <p data-i18n="aboutPage.approach2">Then we design the right solution, build clean software, and iterate. Launch is not the end of the work; it is the point where the product can be improved with real use in mind.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="section" aria-labelledby="values-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow" data-i18n="aboutPage.valuesEyebrow">Studio</span>
+          <h2 class="section-title" id="values-title" data-i18n="aboutPage.valuesTitle">Our values</h2>
+        </div>
+        <div class="values-grid">
+          <article class="value-item reveal">
+            <h3 data-i18n="aboutPage.v1Title">Clarity</h3>
+            <p data-i18n="aboutPage.v1Copy">Decisions, interfaces, and code should be understandable. Ambiguity is expensive.</p>
+          </article>
+          <article class="value-item reveal reveal-delay-1">
+            <h3 data-i18n="aboutPage.v2Title">Quality</h3>
+            <p data-i18n="aboutPage.v2Copy">We prefer fewer features done well over a surface that looks complete and does not hold.</p>
+          </article>
+          <article class="value-item reveal">
+            <h3 data-i18n="aboutPage.v3Title">Reliability</h3>
+            <p data-i18n="aboutPage.v3Copy">Software should behave consistently. People need to trust what they use.</p>
+          </article>
+          <article class="value-item reveal reveal-delay-1">
+            <h3 data-i18n="aboutPage.v4Title">Curiosity</h3>
+            <p data-i18n="aboutPage.v4Copy">We stay interested in better ways to solve the same problem, without chasing novelty for its own sake.</p>
+          </article>
+          <article class="value-item reveal">
+            <h3 data-i18n="aboutPage.v5Title">Long-term thinking</h3>
+            <p data-i18n="aboutPage.v5Copy">Products change. We build with the next version in mind, not just the first release.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-flush" aria-labelledby="tech-title">
+      <div class="container reveal">
+        <span class="eyebrow" data-i18n="aboutPage.techEyebrow">Capabilities</span>
+        <h2 class="section-title" id="tech-title" data-i18n="aboutPage.techTitle">Technology</h2>
+        <p class="section-copy" data-i18n="aboutPage.techCopy">Kodama selects tools based on the product, not the other way around. The technologies below are capabilities we can work with. They are not a claim that every project uses every item on the list.</p>
+        <ul class="tech-list">
+          <li>Flutter</li>
+          <li>Dart</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>Node.js</li>
+          <li>NestJS</li>
+          <li>PostgreSQL</li>
+          <li>REST APIs</li>
+          <li>Firebase</li>
+        </ul>
+        <p class="note" data-i18n="aboutPage.techNote">The stack for a given project is chosen after the problem, users, and constraints are clear.</p>
+      </div>
+    </section>
+
+    <section class="section cta-band" aria-labelledby="cta-title">
+      <div class="container reveal">
+        <h2 id="cta-title" data-i18n="aboutPage.ctaTitle">Let’s build something useful.</h2>
+        <p data-i18n="aboutPage.ctaCopy">If you have an idea that needs a careful technical partner, we would like to hear about it.</p>
+        <a class="btn btn-primary" href="contact.html" data-i18n="nav.cta">Start a Project</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="footer-logo" href="index.html">
+            <img src="assets/logo/Kodama.png" alt="Kodama" loading="lazy">
+          </a>
+          <p class="footer-copy" data-i18n="footer.copy">Software studio building modern digital products.</p>
+        </div>
+        <div>
+          <p class="footer-heading" data-i18n="footer.navigation">Navigation</p>
+          <ul class="footer-links">
+            <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+            <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+            <li><a href="projects.html" data-i18n="nav.projects">Projects</a></li>
+            <li><a href="about.html" data-i18n="nav.about">About</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading" data-i18n="footer.start">Start</p>
+          <ul class="footer-links">
+            <li><a href="contact.html" data-i18n="nav.cta">Start a Project</a></li>
+            <li><a href="services.html" data-i18n="footer.ourServices">Our Services</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-bottom" data-i18n="footer.copyright">© 2026 Kodama. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/translations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

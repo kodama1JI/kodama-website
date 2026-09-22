@@ -4,13 +4,12 @@
   var SERVICE = 0.5;
   var CATS = ["all", "kitchen", "bakery", "market", "cafe"];
   var STATUSES = ["confirmed", "preparing", "picked", "ontheway", "delivered"];
-  var PINS = [
-    { left: 28, top: 70 },
-    { left: 28, top: 70 },
-    { left: 40, top: 56 },
-    { left: 58, top: 42 },
-    { left: 78, top: 30 }
-  ];
+  var PLACES = {
+    garden: { x: 24, y: 36 },
+    harbor: { x: 72, y: 30 },
+    cedar: { x: 48, y: 72 },
+    store: { x: 22, y: 64 }
+  };
   var MINUTES = [34, 26, 16, 8, 0];
 
   var STORES = [
@@ -49,6 +48,8 @@
       noneCopy: "Choose a store and place a sample order to open tracking.",
       browse: "Browse stores",
       locationTitle: "Delivery address",
+      mapCaption: "Sample map",
+      storePin: "Store",
       useAddress: "Use this address",
       back: "Back",
       add: "Add",
@@ -101,9 +102,9 @@
         delivered: "Left at the door in this demo."
       },
       addresses: {
-        garden: { title: "18 Garden Street, Apt 4", detail: "Home · sample address" },
-        harbor: { title: "Harbor Tower, Floor 12", detail: "Work · sample address" },
-        cedar: { title: "7 Cedar Lane", detail: "Other · sample address" }
+        garden: { title: "18 Garden Street, Apt 4", detail: "Home · sample address", pin: "Home" },
+        harbor: { title: "Harbor Tower, Floor 12", detail: "Work · sample address", pin: "Work" },
+        cedar: { title: "7 Cedar Lane", detail: "Other · sample address", pin: "Other" }
       },
       stores: {
         cedar: { name: "Cedar Kitchen", blurb: "Plates and soups" },
@@ -137,6 +138,8 @@
       noneCopy: "اختر متجراً وأكد طلباً تجريبياً لفتح التتبّع.",
       browse: "تصفح المتاجر",
       locationTitle: "عنوان التوصيل",
+      mapCaption: "خريطة تجريبية",
+      storePin: "المتجر",
       useAddress: "استخدم هذا العنوان",
       back: "رجوع",
       add: "أضف",
@@ -189,9 +192,9 @@
         delivered: "أُترك عند الباب في هذا العرض."
       },
       addresses: {
-        garden: { title: "18 شارع الحديقة، شقة 4", detail: "المنزل · عنوان تجريبي" },
-        harbor: { title: "برج الميناء، الطابق 12", detail: "العمل · عنوان تجريبي" },
-        cedar: { title: "7 زقاق الأرز", detail: "آخر · عنوان تجريبي" }
+        garden: { title: "18 شارع الحديقة، شقة 4", detail: "المنزل · عنوان تجريبي", pin: "المنزل" },
+        harbor: { title: "برج الميناء، الطابق 12", detail: "العمل · عنوان تجريبي", pin: "العمل" },
+        cedar: { title: "7 زقاق الأرز", detail: "آخر · عنوان تجريبي", pin: "آخر" }
       },
       stores: {
         cedar: { name: "مطبخ الأرز", blurb: "أطباق وشوربات" },
@@ -288,6 +291,71 @@
     }, 0);
   }
 
+  function mapArt() {
+    return '<svg class="map-art" viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">' +
+      '<rect width="320" height="200" fill="#d5ebe4"/>' +
+      '<path d="M248 0h72v200h-28c-22-24-6-52 8-78 12-22 10-46-4-66 10-18 14-36 8-56z" fill="#7ebfd4"/>' +
+      '<ellipse cx="64" cy="46" rx="48" ry="30" fill="#7fb56d"/>' +
+      '<ellipse cx="150" cy="158" rx="58" ry="28" fill="#8fc47c"/>' +
+      '<rect x="16" y="96" width="48" height="32" rx="3" fill="#f6f0e4"/>' +
+      '<rect x="78" y="100" width="38" height="26" rx="3" fill="#efe4d2"/>' +
+      '<rect x="124" y="22" width="50" height="34" rx="3" fill="#f8f3e8"/>' +
+      '<rect x="186" y="36" width="42" height="30" rx="3" fill="#efe2cc"/>' +
+      '<rect x="132" y="86" width="46" height="28" rx="3" fill="#f4ecdf"/>' +
+      '<rect x="196" y="108" width="40" height="34" rx="3" fill="#eadcc8"/>' +
+      '<path d="M0 74h236M0 128h214M104 0v200M188 0v156" fill="none" stroke="#f4faf7" stroke-width="11"/>' +
+      '<path d="M0 74h236M0 128h214M104 0v200M188 0v156" fill="none" stroke="#ffffff" stroke-width="5" opacity="0.75"/>' +
+      "</svg>";
+  }
+
+  function pinMarkup(id, interactive, selected) {
+    var place = PLACES[id];
+    var label = id === "store" ? bag().storePin : bag().addresses[id].pin;
+    var cls = "pin" + (id === "store" ? " pin-store" : " pin-place") + (selected ? " is-on" : "");
+    var style = ' style="left:' + place.x + "%;top:" + place.y + '%"';
+    var inner = '<span class="pin-dot"></span><span class="pin-label">' + esc(label) + "</span>";
+    if (interactive) {
+      return '<button type="button" class="' + cls + '" data-action="pick" data-id="' + id + '"' + style +
+        ' aria-pressed="' + (selected ? "true" : "false") + '">' + inner + "</button>";
+    }
+    return '<span class="' + cls + '"' + style + ">" + inner + "</span>";
+  }
+
+  function driverPoint(addressId, status) {
+    var from = PLACES.store;
+    var to = PLACES[addressId] || PLACES.garden;
+    var t = [0, 0.1, 0.36, 0.68, 1][status] || 0;
+    return {
+      left: Math.round((from.x + (to.x - from.x) * t) * 10) / 10,
+      top: Math.round((from.y + (to.y - from.y) * t) * 10) / 10
+    };
+  }
+
+  function mapHtml(mode, order) {
+    var badge = '<span class="map-badge">' + esc(bag().mapCaption) + "</span>";
+    var ids = ["garden", "harbor", "cedar"];
+    if (mode === "preview") {
+      return '<button type="button" class="map" data-action="location" aria-label="' + esc(bag().locationTitle) + '">' +
+        mapArt() + badge +
+        ids.map(function (id) { return pinMarkup(id, false, id === state.addressId); }).join("") +
+        "</button>";
+    }
+    if (mode === "pick") {
+      return '<div class="map" role="group" aria-label="' + esc(bag().mapCaption) + '">' +
+        mapArt() + badge +
+        ids.map(function (id) { return pinMarkup(id, true, id === state.addressId); }).join("") +
+        "</div>";
+    }
+    var drop = order.addressId;
+    var driver = driverPoint(drop, order.status);
+    var route = '<svg class="route" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">' +
+      '<line x1="' + PLACES.store.x + '" y1="' + PLACES.store.y + '" x2="' + PLACES[drop].x + '" y2="' + PLACES[drop].y +
+      '" fill="none" stroke="#e06a2c" stroke-width="1.6" stroke-dasharray="2.4 1.6" stroke-linecap="round"/></svg>';
+    var driverPin = order.status === 0 ? "" :
+      '<span class="pin pin-driver" style="left:' + driver.left + "%;top:" + driver.top + '%"><span class="pin-dot"></span></span>';
+    return '<div class="map">' + mapArt() + badge + route + pinMarkup("store", false, false) + pinMarkup(drop, false, true) + driverPin + "</div>";
+  }
+
   function address() {
     return bag().addresses[state.addressId];
   }
@@ -382,6 +450,7 @@
       '<button type="button" class="addr" data-action="location">' +
         "<span><small>" + esc(bag().deliverTo) + "</small><strong>" + esc(addr.title) + "</strong></span>" +
         "<span class=\"muted\">" + esc(bag().change) + "</span></button>" +
+      mapHtml("preview") +
       searchBox() +
       '<div class="chips">' + chips + "</div>" +
       active +
@@ -400,11 +469,12 @@
     var choices = ["garden", "harbor", "cedar"].map(function (id) {
       var row = bag().addresses[id];
       var checked = state.addressId === id ? " checked" : "";
-      return '<label class="choice"><input type="radio" name="address" value="' + id + '"' + checked + '><span><strong>' + esc(row.title) + '</strong><small class="muted">' + esc(row.detail) + "</small></span></label>";
+      var on = state.addressId === id ? " is-on" : "";
+      return '<label class="choice' + on + '"><input type="radio" name="address" value="' + id + '"' + checked + '><span><strong>' + esc(row.title) + '</strong><small class="muted">' + esc(row.detail) + "</small></span></label>";
     }).join("");
     return shell(
       backHeader(bag().locationTitle) +
-      '<div class="map" aria-hidden="true"><span class="road road-h"></span><span class="road road-v"></span><span class="pin pin-store"></span><span class="pin pin-home"></span></div>' +
+      mapHtml("pick") +
       choices +
       '<button type="button" class="btn block" data-action="use-address">' + esc(bag().useAddress) + "</button>",
       ""
@@ -475,7 +545,6 @@
       );
     }
     var store = storeById(order.storeId);
-    var pin = PINS[order.status];
     var steps = STATUSES.map(function (key, index) {
       var cls = index < order.status ? "is-done" : index === order.status ? "is-now" : "";
       return '<li class="step ' + cls + '"><span class="dot"></span><span><strong>' + esc(bag().statuses[key]) + "</strong><small>" + (index === order.status ? esc(bag().statusNote[key]) : "") + "</small></span></li>";
@@ -494,9 +563,7 @@
       '<p class="kicker">' + esc(order.id) + "</p>" +
       '<h1 id="screen-title" class="word" style="font-size:24px">' + esc(bag().stores[store.id].name) + "</h1>" +
       '<p class="price">' + eta + "</p>" +
-      '<div class="map" aria-hidden="true"><span class="road road-h"></span><span class="road road-v"></span><span class="road road-d"></span>' +
-      '<span class="pin pin-store"></span><span class="pin pin-home"></span>' +
-      '<span class="pin pin-driver" style="left:' + pin.left + "%;top:" + pin.top + '%"></span></div>' +
+      mapHtml("track", order) +
       '<ol class="steps">' + steps + "</ol>" +
       '<div class="driver"><small class="muted">' + esc(bag().driver) + "</small>" + driver + "</div>" +
       '<div class="panel"><small class="muted">' + esc(bag().address) + "</small><strong>" + esc(bag().addresses[order.addressId].title) + "</strong>" +
@@ -665,6 +732,10 @@
       state.stack = [];
       state.screen = "tracking";
       render();
+    } else if (action === "pick") {
+      state.addressId = button.getAttribute("data-id");
+      pendingFocus = '[data-action="pick"][data-id="' + state.addressId + '"]';
+      render();
     } else if (action === "clear") {
       state.query = "";
       render();
@@ -672,7 +743,11 @@
   });
 
   view.addEventListener("change", function (event) {
-    if (event.target.name === "address") state.addressId = event.target.value;
+    if (event.target.name === "address") {
+      state.addressId = event.target.value;
+      pendingFocus = 'input[name="address"][value="' + state.addressId + '"]';
+      render();
+    }
   });
 
   view.addEventListener("input", function (event) {

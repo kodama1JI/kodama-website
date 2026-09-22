@@ -348,7 +348,7 @@
       return "<li>" + esc(monthLabel(row.key)) + ": " + esc(money(row.revenue)) + " / " + esc(money(row.expenses)) + "</li>";
     }).join("") + "</ul>";
     return '<div class="chart" role="img" aria-label="' + esc(bag().chartTitle) + '">' + cols + "</div>" + sr +
-      '<div class="legend"><span><i class="swatch" style="background:var(--accent)"></i>' + esc(bag().revKey) + '</span><span><i class="swatch" style="background:var(--muted)"></i>' + esc(bag().expKey) + "</span></div>";
+      '<div class="legend"><span><i class="swatch rev"></i>' + esc(bag().revKey) + '</span><span><i class="swatch exp"></i>' + esc(bag().expKey) + "</span></div>";
   }
 
   function donut(parts) {

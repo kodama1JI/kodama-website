@@ -1,12 +1,12 @@
 .device-screen {
-  --bg: #161310;
-  --card: #241e19;
-  --text: #f6f1ea;
-  --muted: #b3a496;
-  --line: rgba(255, 255, 255, 0.08);
-  --accent: #e4b15a;
-  --accent-ink: #2a2116;
-  --soft: rgba(228, 177, 90, 0.16);
+  --bg: #1a120e;
+  --card: #2c211b;
+  --text: #fff7ef;
+  --muted: #c4b2a2;
+  --line: rgba(255, 236, 214, 0.1);
+  --accent: #ff9f43;
+  --accent-ink: #2a1608;
+  --soft: rgba(255, 159, 67, 0.18);
   --toast: #3a3128;
   --toast-text: #f6f1ea;
   background: var(--bg);
@@ -14,14 +14,14 @@
 }
 
 [data-theme="light"] .device-screen {
-  --bg: #f4efe8;
-  --card: #fffdfb;
-  --text: #241c16;
-  --muted: #6e6258;
-  --line: rgba(36, 28, 22, 0.1);
-  --accent: #9a5b2a;
-  --accent-ink: #fffaf5;
-  --soft: rgba(154, 91, 42, 0.12);
+  --bg: #fbf6f0;
+  --card: #ffffff;
+  --text: #2a1c14;
+  --muted: #6d584a;
+  --line: rgba(42, 28, 20, 0.1);
+  --accent: #e06a2c;
+  --accent-ink: #fffaf6;
+  --soft: rgba(224, 106, 44, 0.12);
   --toast: #2a2118;
   --toast-text: #fffaf5;
 }

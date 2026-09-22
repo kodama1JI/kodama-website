@@ -715,9 +715,15 @@ ol {
 
 /* Project cards */
 
-.project-grid {
-  display: grid;
-  gap: 1.15rem;
+.app-group {
+  margin: 0 0 1rem;
+  font-size: clamp(1.35rem, 2vw, 1.7rem);
+  letter-spacing: -0.03em;
+}
+
+.app-group + .project-grid,
+.project-band .project-grid {
+  margin-bottom: 2.5rem;
 }
 
 .project-card {

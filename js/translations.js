@@ -12,7 +12,19 @@ window.KodamaI18n = {
         },
         projects: {
           title: "Kodama | Projects",
-          description: "Interactive frontend prototypes from Kodama — restaurant, delivery, and accounting demos with mock data, not client projects."
+          description: "Interactive frontend prototypes from Kodama — mobile app demos and web application demos with mock data, not client projects."
+        },
+        ecommerce: {
+          title: "Kodama | NOVA E-Commerce Demo",
+          description: "Interactive frontend prototype of the fictional NOVA store by Kodama. Sample products and a mock checkout only — no real payment."
+        },
+        flow: {
+          title: "Kodama | FLOW Project Management Demo",
+          description: "Interactive frontend prototype of the fictional FLOW project platform by Kodama. Sample tasks and team data only."
+        },
+        insight: {
+          title: "Kodama | INSIGHT Analytics Demo",
+          description: "Interactive frontend prototype of the fictional INSIGHT analytics workspace by Kodama. Charts and insights are mock data, not live AI."
         },
         restaurant: {
           title: "Kodama | Restaurant App Demo",
@@ -124,15 +136,30 @@ window.KodamaI18n = {
         deliveryCopy: "A mobile delivery prototype with store browsing, a basket, and simulated order tracking.",
         accountingCat: "Business Management Dashboard",
         accountingTitle: "Accounting App",
-        accountingCopy: "A desktop dashboard prototype for sales, inventory, customers, and reports, using sample data."
+        accountingCopy: "A desktop dashboard prototype for sales, inventory, customers, and reports, using sample data.",
+        groupMobile: "Mobile Applications",
+        groupWeb: "Web Applications",
+        novaCat: "E-Commerce Platform",
+        novaTitle: "NOVA",
+        novaCopy: "A premium store prototype: browse products, save a wishlist, and complete a sample checkout. No payment is processed.",
+        flowCat: "Project Management",
+        flowTitle: "FLOW",
+        flowCopy: "A team workspace prototype with projects, a kanban board, a calendar, and sample tasks.",
+        insightCat: "Analytics & Productivity",
+        insightTitle: "INSIGHT",
+        insightCopy: "An analytics workspace prototype with mock charts, sample insights, and goals. It does not use live AI."
       },
       demo: {
         back: "Back to Kodama",
         kicker: "Kodama Prototype",
         kind: "Interactive Frontend Demo",
+        kindWeb: "Interactive Web Application Demo",
         restaurantNote: "Restaurant ordering prototype. Sample dishes and prices only — nothing is ordered or charged.",
         deliveryNote: "Delivery prototype with simulated tracking. No live map, courier, or payment.",
-        accountingNote: "Accounting dashboard prototype. Figures are sample data for a fictional company."
+        accountingNote: "Accounting dashboard prototype. Figures are sample data for a fictional company.",
+        ecommerceNote: "NOVA is a store prototype. Nothing is charged, and customer details stay in this browser.",
+        flowNote: "FLOW is a project workspace prototype. Projects, tasks, and messages are sample data.",
+        insightNote: "INSIGHT is an analytics prototype. Figures and insight cards are mock examples, not live AI."
       },
       servicesPage: {
         eyebrow: "Services",
@@ -264,7 +291,19 @@ window.KodamaI18n = {
         },
         projects: {
           title: "Kodama | المشاريع",
-          description: "نماذج واجهات تفاعلية من Kodama لمطعم وتوصيل ومحاسبة. بيانات تجريبية، وليست مشاريع عملاء."
+          description: "نماذج واجهات تفاعلية من Kodama لتطبيقات الجوال وتطبيقات الويب. بيانات تجريبية، وليست مشاريع عملاء."
+        },
+        ecommerce: {
+          title: "Kodama | عرض متجر NOVA",
+          description: "نموذج واجهة تفاعلي لمتجر NOVA الوهمي من Kodama. منتجات تجريبية وإتمام طلب وهمي دون دفع حقيقي."
+        },
+        flow: {
+          title: "Kodama | عرض منصة FLOW",
+          description: "نموذج واجهة تفاعلي لمنصة FLOW الوهمية لإدارة المشاريع من Kodama. مهام وفريق ببيانات تجريبية."
+        },
+        insight: {
+          title: "Kodama | عرض منصة INSIGHT",
+          description: "نموذج واجهة تفاعلي لمساحة INSIGHT التحليلية الوهمية من Kodama. الرسوم والرؤى بيانات تجريبية وليست ذكاءً اصطناعياً حياً."
         },
         restaurant: {
           title: "Kodama | عرض تطبيق المطعم",
@@ -376,15 +415,30 @@ window.KodamaI18n = {
         deliveryCopy: "نموذج توصيل للجوال مع تصفّح المتاجر وسلة وتتبع طلب محاكى.",
         accountingCat: "لوحة إدارة الأعمال",
         accountingTitle: "تطبيق المحاسبة",
-        accountingCopy: "نموذج لوحة لسطح المكتب للمبيعات والمخزون والعملاء والتقارير، ببيانات تجريبية."
+        accountingCopy: "نموذج لوحة لسطح المكتب للمبيعات والمخزون والعملاء والتقارير، ببيانات تجريبية.",
+        groupMobile: "تطبيقات الجوال",
+        groupWeb: "تطبيقات الويب",
+        novaCat: "منصة تجارة إلكترونية",
+        novaTitle: "NOVA",
+        novaCopy: "نموذج متجر فاخر: تصفح المنتجات، احفظ قائمة أمنيات، وأكمل طلباً تجريبياً. لا يُعالج أي دفع.",
+        flowCat: "إدارة المشاريع",
+        flowTitle: "FLOW",
+        flowCopy: "نموذج مساحة عمل للفريق مع مشاريع ولوحة مهام وتقويم ومهام تجريبية.",
+        insightCat: "تحليلات وإنتاجية",
+        insightTitle: "INSIGHT",
+        insightCopy: "نموذج مساحة تحليلات مع رسوم ورؤى وأهداف تجريبية. لا يستخدم ذكاءً اصطناعياً حياً."
       },
       demo: {
         back: "العودة إلى Kodama",
         kicker: "نموذج Kodama",
         kind: "عرض واجهة تفاعلي",
+        kindWeb: "عرض تطبيق ويب تفاعلي",
         restaurantNote: "نموذج لطلب الطعام. أطباق وأسعار تجريبية فقط — لا يُرسل أي طلب ولا يتم الدفع.",
         deliveryNote: "نموذج توصيل مع تتبّع محاكى. لا توجد خريطة حية أو مندوب أو دفع.",
-        accountingNote: "نموذج لوحة محاسبة. الأرقام بيانات تجريبية لشركة وهمية."
+        accountingNote: "نموذج لوحة محاسبة. الأرقام بيانات تجريبية لشركة وهمية.",
+        ecommerceNote: "NOVA نموذج متجر. لا يُخصم أي مبلغ، وتبقى بيانات النموذج داخل هذا المتصفح.",
+        flowNote: "FLOW نموذج مساحة مشاريع. المشاريع والمهام والرسائل بيانات تجريبية.",
+        insightNote: "INSIGHT نموذج تحليلات. الأرقام وبطاقات الرؤى أمثلة تجريبية وليست ذكاءً اصطناعياً حياً."
       },
       servicesPage: {
         eyebrow: "الخدمات",

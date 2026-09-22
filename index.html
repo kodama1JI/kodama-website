@@ -155,7 +155,9 @@
           <h2 class="section-title" id="work-title" data-i18n="home.workTitle">Selected work</h2>
           <p class="section-copy" data-i18n="home.workCopy">Interactive frontend prototypes that show the kind of product experiences Kodama can design and build.</p>
         </div>
-        <div class="project-grid">
+        <section class="project-band" data-group-label="mobile">
+          <h3 class="app-group" data-i18n="projects.groupMobile">Mobile Applications</h3>
+          <div class="project-grid">
 <article class="project-card reveal" data-category="mobile">
             <div class="project-visual">
               <svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -248,8 +250,82 @@
               </div>
             </div>
           </article>
-
-        </div>
+          </div>
+        </section>
+        <section class="project-band" data-group-label="web">
+          <h3 class="app-group" data-i18n="projects.groupWeb">Web Applications</h3>
+          <div class="project-grid">
+            <article class="project-card reveal" data-category="web">
+              <div class="project-visual">
+                <svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <rect width="640" height="400" fill="#1a1412"/>
+                  <rect x="48" y="36" width="544" height="328" rx="8" fill="#241c19" stroke="#c45c4a" stroke-width="1.4"/>
+                  <rect x="72" y="102" width="250" height="150" rx="4" fill="#c45c4a" opacity="0.85"/>
+                  <rect x="342" y="102" width="226" height="70" rx="4" fill="#f3ece4" opacity="0.1"/>
+                  <rect x="72" y="272" width="496" height="64" rx="4" fill="#f3ece4" opacity="0.08"/>
+                </svg>
+              </div>
+              <div class="project-body">
+                <span class="project-category" data-i18n="projects.novaCat">E-Commerce Platform</span>
+                <h3 data-i18n="projects.novaTitle">NOVA</h3>
+                <p data-i18n="projects.novaCopy">A premium store prototype: browse products, save a wishlist, and complete a sample checkout. No payment is processed.</p>
+                <div class="tags">
+                  <span class="tag" data-i18n="projects.badge">Interactive Demo</span>
+                  <span class="tag" data-i18n="projects.frontend">Frontend Prototype</span>
+                </div>
+                <div class="project-actions">
+                  <a class="btn btn-secondary project-explore" href="demos/ecommerce/index.html" data-i18n="projects.explore">Explore Demo</a>
+                </div>
+              </div>
+            </article>
+            <article class="project-card reveal reveal-delay-1" data-category="web">
+              <div class="project-visual">
+                <svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <rect width="640" height="400" fill="#101426"/>
+                  <rect x="40" y="40" width="120" height="320" rx="10" fill="#171c33"/>
+                  <rect x="180" y="48" width="140" height="150" rx="12" fill="#22284a"/>
+                  <rect x="336" y="48" width="140" height="150" rx="12" fill="#2a3160"/>
+                  <rect x="492" y="48" width="112" height="150" rx="12" fill="#22284a"/>
+                  <rect x="180" y="216" width="424" height="130" rx="12" fill="#171c33"/>
+                </svg>
+              </div>
+              <div class="project-body">
+                <span class="project-category" data-i18n="projects.flowCat">Project Management</span>
+                <h3 data-i18n="projects.flowTitle">FLOW</h3>
+                <p data-i18n="projects.flowCopy">A team workspace prototype with projects, a kanban board, a calendar, and sample tasks.</p>
+                <div class="tags">
+                  <span class="tag" data-i18n="projects.badge">Interactive Demo</span>
+                  <span class="tag" data-i18n="projects.frontend">Frontend Prototype</span>
+                </div>
+                <div class="project-actions">
+                  <a class="btn btn-secondary project-explore" href="demos/project-management/index.html" data-i18n="projects.explore">Explore Demo</a>
+                </div>
+              </div>
+            </article>
+            <article class="project-card reveal reveal-delay-2" data-category="web">
+              <div class="project-visual">
+                <svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <rect width="640" height="400" fill="#0c1416"/>
+                  <rect x="36" y="28" width="568" height="344" rx="14" fill="#121c1f" stroke="#3ddc97" stroke-opacity="0.45"/>
+                  <polyline points="72,250 160,190 250,220 340,140 450,170 560,110" fill="none" stroke="#3ddc97" stroke-width="3"/>
+                  <rect x="56" y="286" width="520" height="58" rx="8" fill="#3ddc97" opacity="0.12"/>
+                </svg>
+              </div>
+              <div class="project-body">
+                <span class="project-category" data-i18n="projects.insightCat">Analytics &amp; Productivity</span>
+                <h3 data-i18n="projects.insightTitle">INSIGHT</h3>
+                <p data-i18n="projects.insightCopy">An analytics workspace prototype with mock charts, sample insights, and goals. It does not use live AI.</p>
+                <div class="tags">
+                  <span class="tag" data-i18n="projects.badge">Interactive Demo</span>
+                  <span class="tag" data-i18n="projects.frontend">Frontend Prototype</span>
+                </div>
+                <div class="project-actions">
+                  <a class="btn btn-secondary project-explore" href="demos/ai-analytics/index.html" data-i18n="projects.explore">Explore Demo</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
         <div class="section-cta reveal">
           <a class="btn btn-secondary" href="projects.html" data-i18n="home.viewProjects">View All Projects</a>
         </div>

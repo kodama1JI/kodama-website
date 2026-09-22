@@ -312,6 +312,48 @@ body:has(.stage-dash) {
   min-height: 0;
 }
 
+.stage-web {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: stretch;
+  padding: 0;
+  gap: 0;
+  overflow: hidden;
+}
+
+.stage-web #app {
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.stage-web #app > * {
+  flex: 1;
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+}
+
+.web-note {
+  margin: 0;
+  padding: 0.4rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg);
+  color: var(--color-text-muted);
+  font-size: 0.78rem;
+}
+
+body:has(.stage-web) {
+  height: 100dvh;
+  overflow: hidden;
+}
+
 .stage-dash .stage-note {
   padding: 0.45rem 1rem 0.7rem;
 }

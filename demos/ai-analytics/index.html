@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark" data-page="insight">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0c1416">
+  <script src="../../js/boot.js"></script>
+  <title>Kodama | INSIGHT Analytics Demo</title>
+  <meta name="description" content="Interactive frontend prototype of the fictional INSIGHT analytics workspace by Kodama. Charts and insights are mock data, not live AI.">
+  <link rel="icon" href="../../assets/logo/Kodama.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/chrome.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#app" data-i18n="ui.skip">Skip to content</a>
+  <header class="demo-bar">
+    <a class="demo-back" href="../../projects.html">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 6.5 9 12l5.5 5.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span data-i18n="demo.back">Back to Kodama</span>
+    </a>
+    <p class="demo-identity">
+      <span class="demo-kicker" data-i18n="demo.kicker">Kodama Prototype</span>
+      <span class="demo-kind" data-i18n="demo.kindWeb">Interactive Web Application Demo</span>
+    </p>
+    <div class="demo-controls">
+      <div class="lang-switch" role="group" data-i18n-aria-label="ui.language" aria-label="Language">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="ar" aria-pressed="false">AR</button>
+      </div>
+      <button type="button" class="theme-toggle" aria-pressed="false" data-i18n-aria-label="ui.themeToLight" aria-label="Switch to light mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 3v1.6M12 19.4V21M4.93 4.93l1.13 1.13M17.94 17.94l1.13 1.13M3 12h1.6M19.4 12H21M4.93 19.07l1.13-1.13M17.94 6.06l1.13-1.13"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M16.2 3.8A8.4 8.4 0 1 0 20.2 15 6.8 6.8 0 0 1 16.2 3.8z"/></svg>
+      </button>
+    </div>
+  </header>
+  <main class="stage stage-web">
+    <p class="web-note" data-i18n="demo.insightNote">INSIGHT is an analytics prototype. Figures and insight cards are mock examples, not live AI.</p>
+    <div id="app"></div>
+  </main>
+  <noscript><p class="web-note">This prototype needs JavaScript. It does not contact a server.</p></noscript>
+  <script src="../../js/translations.js"></script>
+  <script src="../../js/main.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

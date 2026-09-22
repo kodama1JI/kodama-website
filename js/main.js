@@ -222,6 +222,10 @@
         if (match) visible += 1;
       });
       if (emptyNote) emptyNote.hidden = visible !== 0;
+      document.querySelectorAll("[data-group-label]").forEach(function (section) {
+        var shown = section.querySelectorAll("[data-category]:not(.is-hidden)").length;
+        section.hidden = shown === 0;
+      });
     }
 
     filters.forEach(function (button) {

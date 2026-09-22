@@ -3,8 +3,8 @@ window.KodamaI18n = {
     en: {
       meta: {
         home: {
-          title: "Kodama | Software Studio",
-          description: "Kodama is a software studio building modern mobile apps, websites, and custom digital products."
+          title: "Kodama | Software Company",
+          description: "Kodama is a software company building modern mobile apps, websites, and custom digital products."
         },
         services: {
           title: "Kodama | Software Development Services",
@@ -16,7 +16,7 @@ window.KodamaI18n = {
         },
         about: {
           title: "Kodama | About",
-          description: "Kodama is a software studio focused on turning ideas into useful, reliable, and well-crafted digital products."
+          description: "Kodama is a software company focused on turning ideas into useful, reliable, and well-crafted digital products."
         },
         contact: {
           title: "Kodama | Start a Project",
@@ -42,16 +42,16 @@ window.KodamaI18n = {
         cta: "Start a Project"
       },
       footer: {
-        copy: "Software studio building modern digital products.",
+        copy: "Software company building modern digital products.",
         navigation: "Navigation",
         start: "Start",
         ourServices: "Our Services",
         copyright: "© 2026 Kodama. All rights reserved."
       },
       home: {
-        eyebrow: "Software studio",
+        eyebrow: "Software company",
         headline: "We build digital products that move ideas forward.",
-        lead: "Kodama is a software studio creating modern mobile apps, websites, and custom digital solutions for businesses and ideas that deserve to grow.",
+        lead: "Kodama is a software company creating modern mobile apps, websites, and custom digital solutions for businesses and ideas that deserve to grow.",
         viewWork: "View Our Work",
         caption: "Kodama · Software Solutions",
         servicesEyebrow: "Services",
@@ -70,7 +70,7 @@ window.KodamaI18n = {
         workTitle: "Selected work",
         workCopy: "A selection of digital products and software experiences built by Kodama.",
         viewProjects: "View All Projects",
-        whyEyebrow: "Studio",
+        whyEyebrow: "Company",
         whyTitle: "Built with purpose.",
         p1Title: "Product First",
         p1Copy: "We focus on solving the right problem before writing the code.",
@@ -170,14 +170,14 @@ window.KodamaI18n = {
       aboutPage: {
         eyebrow: "About",
         title: "Technology with intention.",
-        lead: "Kodama is a software studio focused on turning ideas into useful, reliable, and well-crafted digital products.",
+        lead: "Kodama is a software company focused on turning ideas into useful, reliable, and well-crafted digital products.",
         storyTitle: "Our story",
         story1: "Kodama exists to help people and businesses turn ideas into working software. We treat every project as a product: something that has to be clear, maintainable, and worth using.",
-        story2: "The studio works across mobile applications, websites, backend systems, and custom software. The through-line is the same — understand the problem, choose the right shape for the solution, and build it with care.",
+        story2: "The company works across mobile applications, websites, backend systems, and custom software. The through-line is the same — understand the problem, choose the right shape for the solution, and build it with care.",
         approachTitle: "Our approach",
         approach1: "We start by understanding the problem — who it is for, what has to happen, and which constraints actually matter. That keeps the work focused before a single screen is designed.",
         approach2: "Then we design the right solution, build clean software, and iterate. Launch is not the end of the work; it is the point where the product can be improved with real use in mind.",
-        valuesEyebrow: "Studio",
+        valuesEyebrow: "Company",
         valuesTitle: "Our values",
         v1Title: "Clarity",
         v1Copy: "Decisions, interfaces, and code should be understandable. Ambiguity is expensive.",
@@ -202,12 +202,8 @@ window.KodamaI18n = {
         lead: "Have a project, idea, or business problem you'd like to discuss? Get in touch with Kodama.",
         email: "Email",
         instagram: "Instagram",
-        linkedin: "LinkedIn",
         whatsapp: "WhatsApp",
-        instagramValue: "Add Instagram URL",
-        linkedinValue: "Add LinkedIn URL",
-        whatsappValue: "Add WhatsApp number",
-        note: "Contact details above are placeholders. Replace them with Kodama’s real email, profiles, and WhatsApp when they are ready.",
+        note: "Reach Kodama directly, or send an inquiry with the form. Your email app will open so the message can go to kodama1JI@gmail.com.",
         name: "Name",
         emailLabel: "Email",
         company: "Company",
@@ -217,6 +213,7 @@ window.KodamaI18n = {
         message: "Message",
         placeholder: "Tell us about the product, the problem, and any timing that matters.",
         submit: "Send Inquiry",
+        mailSubject: "Kodama inquiry",
         typeMobile: "Mobile application",
         typeWeb: "Website / web platform",
         typeBackend: "Backend & APIs",
@@ -231,14 +228,14 @@ window.KodamaI18n = {
         errorEmailInvalid: "Please enter a valid email address.",
         errorMessage: "Please describe your project.",
         errorGeneric: "Please correct the highlighted fields before sending.",
-        success: "This form is not connected yet. Contact integration will be added in a later version. Please use the placeholder contact details on this page for now."
+        success: "Your email app will open so you can send this inquiry to Kodama. If it does not open, write to us at kodama1JI@gmail.com."
       }
     },
     ar: {
       meta: {
         home: {
-          title: "Kodama | استوديو برمجيات",
-          description: "Kodama استوديو برمجيات يبني تطبيقات الجوال والمواقع والمنتجات الرقمية المخصصة."
+          title: "Kodama | شركة برمجيات",
+          description: "Kodama شركة برمجيات تبني تطبيقات الجوال والمواقع والمنتجات الرقمية المخصصة."
         },
         services: {
           title: "Kodama | خدمات تطوير البرمجيات",
@@ -250,7 +247,7 @@ window.KodamaI18n = {
         },
         about: {
           title: "Kodama | من نحن",
-          description: "Kodama استوديو برمجيات يحوّل الأفكار إلى منتجات رقمية مفيدة وموثوقة ومتقنة."
+          description: "Kodama شركة برمجيات تحوّل الأفكار إلى منتجات رقمية مفيدة وموثوقة ومتقنة."
         },
         contact: {
           title: "Kodama | ابدأ مشروعك",
@@ -276,16 +273,16 @@ window.KodamaI18n = {
         cta: "ابدأ مشروعك"
       },
       footer: {
-        copy: "استوديو برمجيات يبني منتجات رقمية حديثة.",
+        copy: "شركة برمجيات تبني منتجات رقمية حديثة.",
         navigation: "التنقل",
         start: "ابدأ",
         ourServices: "خدماتنا",
         copyright: "© 2026 Kodama. جميع الحقوق محفوظة."
       },
       home: {
-        eyebrow: "استوديو برمجيات",
+        eyebrow: "شركة برمجيات",
         headline: "نبني منتجات رقمية تدفع الأفكار إلى الأمام.",
-        lead: "Kodama استوديو برمجيات يصمم تطبيقات جوال ومواقع وحلول رقمية مخصصة للشركات والأفكار التي تستحق النمو.",
+        lead: "Kodama شركة برمجيات تصمم تطبيقات جوال ومواقع وحلول رقمية مخصصة للشركات والأفكار التي تستحق النمو.",
         viewWork: "شاهد أعمالنا",
         caption: "Kodama · حلول برمجية",
         servicesEyebrow: "الخدمات",
@@ -304,7 +301,7 @@ window.KodamaI18n = {
         workTitle: "أعمال مختارة",
         workCopy: "مجموعة من المنتجات الرقمية والتجارب البرمجية التي بناها Kodama.",
         viewProjects: "عرض كل المشاريع",
-        whyEyebrow: "الاستوديو",
+        whyEyebrow: "الشركة",
         whyTitle: "نُبنى بقصد.",
         p1Title: "المنتج أولاً",
         p1Copy: "نركّز على حل المشكلة الصحيحة قبل كتابة الشيفرة.",
@@ -404,14 +401,14 @@ window.KodamaI18n = {
       aboutPage: {
         eyebrow: "من نحن",
         title: "تقنية بقصد.",
-        lead: "Kodama استوديو برمجيات يركز على تحويل الأفكار إلى منتجات رقمية مفيدة وموثوقة ومتقنة الصنع.",
+        lead: "Kodama شركة برمجيات تركز على تحويل الأفكار إلى منتجات رقمية مفيدة وموثوقة ومتقنة الصنع.",
         storyTitle: "قصتنا",
         story1: "يوجد Kodama لمساعدة الأفراد والشركات على تحويل الأفكار إلى برمجيات تعمل. نتعامل مع كل مشروع كمنتج: يجب أن يكون واضحاً وقابلاً للصيانة ويستحق الاستخدام.",
-        story2: "يعمل الاستوديو عبر تطبيقات الجوال والمواقع وأنظمة الخلفية والبرمجيات المخصصة. الخيط المشترك واحد: فهم المشكلة، اختيار الشكل الصحيح للحل، وبناؤه بعناية.",
+        story2: "تعمل الشركة عبر تطبيقات الجوال والمواقع وأنظمة الخلفية والبرمجيات المخصصة. الخيط المشترك واحد: فهم المشكلة، اختيار الشكل الصحيح للحل، وبناؤه بعناية.",
         approachTitle: "منهجنا",
         approach1: "نبدأ بفهم المشكلة: لمن هي، وما الذي يجب أن يحدث، وأي القيود مهمة فعلاً. ذلك يبقي العمل مركزاً قبل تصميم أي شاشة.",
         approach2: "ثم نصمم الحل المناسب، ونبني برمجيات نظيفة، ونحسّن بالتكرار. الإطلاق ليس نهاية العمل؛ بل النقطة التي يمكن تحسين المنتج فيها بناءً على الاستخدام الحقيقي.",
-        valuesEyebrow: "الاستوديو",
+        valuesEyebrow: "الشركة",
         valuesTitle: "قيمنا",
         v1Title: "الوضوح",
         v1Copy: "القرارات والواجهات والشيفرة يجب أن تكون مفهومة. الغموض مكلف.",
@@ -436,12 +433,8 @@ window.KodamaI18n = {
         lead: "هل لديك مشروع أو فكرة أو مشكلة أعمال تود مناقشتها؟ تواصل مع Kodama.",
         email: "البريد",
         instagram: "Instagram",
-        linkedin: "LinkedIn",
         whatsapp: "WhatsApp",
-        instagramValue: "أضف رابط Instagram",
-        linkedinValue: "أضف رابط LinkedIn",
-        whatsappValue: "أضف رقم WhatsApp",
-        note: "بيانات التواصل أعلاه عناصر نائبة. استبدلها بالبريد الحقيقي وحسابات Kodama وWhatsApp عند جاهزيتها.",
+        note: "تواصل مع Kodama مباشرة، أو أرسل استفساراً عبر النموذج. سيُفتح تطبيق البريد لديك لإرسال الرسالة إلى kodama1JI@gmail.com.",
         name: "الاسم",
         emailLabel: "البريد",
         company: "الشركة",
@@ -451,6 +444,7 @@ window.KodamaI18n = {
         message: "الرسالة",
         placeholder: "أخبرنا عن المنتج والمشكلة وأي توقيت مهم.",
         submit: "إرسال الاستفسار",
+        mailSubject: "استفسار Kodama",
         typeMobile: "تطبيق جوال",
         typeWeb: "موقع / منصة ويب",
         typeBackend: "خلفية وواجهات API",
@@ -465,7 +459,7 @@ window.KodamaI18n = {
         errorEmailInvalid: "يرجى إدخال بريد إلكتروني صالح.",
         errorMessage: "يرجى وصف مشروعك.",
         errorGeneric: "يرجى تصحيح الحقول المظللة قبل الإرسال.",
-        success: "هذا النموذج غير متصل بعد. سيتم ربط خدمة التواصل في إصدار لاحق. يرجى استخدام بيانات التواصل النائبة في هذه الصفحة حالياً."
+        success: "سيُفتح تطبيق البريد لديك لإرسال هذا الاستفسار إلى Kodama. إذا لم يُفتح، راسلنا على kodama1JI@gmail.com."
       }
     }
   },

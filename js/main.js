@@ -226,6 +226,7 @@
     });
   }
 
+  var CONTACT_EMAIL = "kodama1JI@gmail.com";
   var form = document.querySelector(".inquiry-form");
   if (form) {
     form.addEventListener("submit", function (event) {
@@ -234,6 +235,9 @@
       var status = form.querySelector(".form-status");
       var name = form.querySelector("#name");
       var email = form.querySelector("#email");
+      var company = form.querySelector("#company");
+      var projectType = form.querySelector("#project-type");
+      var budget = form.querySelector("#budget");
       var message = form.querySelector("#message");
       var valid = true;
 
@@ -272,6 +276,27 @@
       formStatusKind = "success";
       status.classList.remove("is-error");
       status.textContent = t("contact.success");
+
+      var typeLabel = projectType && projectType.selectedIndex >= 0
+        ? projectType.options[projectType.selectedIndex].text
+        : "";
+      var budgetLabel = budget && budget.selectedIndex >= 0
+        ? budget.options[budget.selectedIndex].text
+        : "";
+      var body = [
+        t("contact.name") + ": " + name.value.trim(),
+        t("contact.emailLabel") + ": " + email.value.trim(),
+        t("contact.company") + ": " + (company && company.value.trim() ? company.value.trim() : "-"),
+        t("contact.projectType") + ": " + typeLabel,
+        t("contact.budget") + ": " + budgetLabel,
+        "",
+        t("contact.message") + ":",
+        message.value.trim()
+      ].join("\n");
+
+      window.location.href = "mailto:" + CONTACT_EMAIL
+        + "?subject=" + encodeURIComponent(t("contact.mailSubject") + " — " + name.value.trim())
+        + "&body=" + encodeURIComponent(body);
     });
   }
 })();

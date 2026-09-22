@@ -90,6 +90,7 @@
       localStorage.setItem(LANG_KEY, next);
     } catch (e) {}
     applyI18n();
+    document.dispatchEvent(new CustomEvent("kodama:preferences", { detail: { type: "lang" } }));
     window.scrollTo(0, window.scrollY || 0);
   }
 
@@ -102,6 +103,7 @@
     var metaTheme = document.querySelector('meta[name="theme-color"]');
     if (metaTheme) metaTheme.setAttribute("content", next === "light" ? "#F7F8F6" : "#0B0D0F");
     updateChromeAria();
+    document.dispatchEvent(new CustomEvent("kodama:preferences", { detail: { type: "theme" } }));
   }
 
   document.querySelectorAll("[data-lang]").forEach(function (btn) {
@@ -210,6 +212,18 @@
   var projects = document.querySelectorAll("[data-category]");
 
   if (filters.length && projects.length) {
+    var emptyNote = document.querySelector("[data-filter-empty]");
+
+    function applyProjectFilter(value) {
+      var visible = 0;
+      projects.forEach(function (card) {
+        var match = value === "all" || card.getAttribute("data-category") === value;
+        card.classList.toggle("is-hidden", !match);
+        if (match) visible += 1;
+      });
+      if (emptyNote) emptyNote.hidden = visible !== 0;
+    }
+
     filters.forEach(function (button) {
       button.addEventListener("click", function () {
         var value = button.getAttribute("data-filter");
@@ -218,10 +232,7 @@
           item.classList.toggle("is-active", active);
           item.setAttribute("aria-pressed", active ? "true" : "false");
         });
-        projects.forEach(function (card) {
-          var match = value === "all" || card.getAttribute("data-category") === value;
-          card.classList.toggle("is-hidden", !match);
-        });
+        applyProjectFilter(value);
       });
     });
   }

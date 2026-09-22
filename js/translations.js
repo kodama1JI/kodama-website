@@ -12,7 +12,19 @@ window.KodamaI18n = {
         },
         projects: {
           title: "Kodama | Projects",
-          description: "Explore selected software products and digital experiences from Kodama, with a focus on usability, performance, and quality."
+          description: "Interactive frontend prototypes from Kodama — restaurant, delivery, and accounting demos with mock data, not client projects."
+        },
+        restaurant: {
+          title: "Kodama | Restaurant App Demo",
+          description: "Interactive frontend prototype of a restaurant ordering app by Kodama. Mock menu and cart only — not a live product."
+        },
+        delivery: {
+          title: "Kodama | Delivery App Demo",
+          description: "Interactive frontend prototype of a delivery app by Kodama, including simulated order tracking. Not a live service."
+        },
+        accounting: {
+          title: "Kodama | Accounting App Demo",
+          description: "Interactive frontend prototype of an accounting dashboard by Kodama. Sample business data only — not a live system."
         },
         about: {
           title: "Kodama | About",
@@ -68,7 +80,7 @@ window.KodamaI18n = {
         exploreServices: "Explore Our Services",
         workEyebrow: "Portfolio",
         workTitle: "Selected work",
-        workCopy: "A selection of digital products and software experiences built by Kodama.",
+        workCopy: "Interactive frontend prototypes that show the kind of product experiences Kodama can design and build.",
         viewProjects: "View All Projects",
         whyEyebrow: "Company",
         whyTitle: "Built with purpose.",
@@ -101,18 +113,26 @@ window.KodamaI18n = {
         catMobile: "Mobile Application",
         catWeb: "Web Platform",
         catSoftware: "Business Software",
-        s1Title: "Showcase 01",
-        s1Copy: "Placeholder for a mobile product focused on clarity, performance, and everyday use.",
-        s2Title: "Showcase 02",
-        s2Copy: "Placeholder for a web platform structured around content, speed, and business goals.",
-        s3Title: "Showcase 03",
-        s3Copy: "Placeholder for internal software designed around workflows, data, and reliability.",
-        s4Title: "Showcase 04",
-        s4Copy: "Placeholder for a second mobile concept, ready to be replaced with a live case.",
-        s5Title: "Showcase 05",
-        s5Copy: "Placeholder for a marketing or product website with a calm, structured layout.",
-        s6Title: "Showcase 06",
-        s6Copy: "Placeholder for an operations or management tool that can be documented later."
+        badge: "Interactive Demo",
+        frontend: "Frontend Prototype",
+        explore: "Explore Demo",
+        restaurantCat: "Food & Restaurant Experience",
+        restaurantTitle: "Restaurant App",
+        restaurantCopy: "A mobile ordering prototype: browse a menu, adjust quantities, and confirm a sample order.",
+        deliveryCat: "Multi-store Delivery Experience",
+        deliveryTitle: "Delivery App",
+        deliveryCopy: "A mobile delivery prototype with store browsing, a basket, and simulated order tracking.",
+        accountingCat: "Business Management Dashboard",
+        accountingTitle: "Accounting App",
+        accountingCopy: "A desktop dashboard prototype for sales, inventory, customers, and reports, using sample data."
+      },
+      demo: {
+        back: "Back to Kodama",
+        kicker: "Kodama Prototype",
+        kind: "Interactive Frontend Demo",
+        restaurantNote: "Restaurant ordering prototype. Sample dishes and prices only — nothing is ordered or charged.",
+        deliveryNote: "Delivery prototype with simulated tracking. No live map, courier, or payment.",
+        accountingNote: "Accounting dashboard prototype. Figures are sample data for a fictional company."
       },
       servicesPage: {
         eyebrow: "Services",
@@ -158,8 +178,9 @@ window.KodamaI18n = {
       projectsPage: {
         eyebrow: "Projects",
         title: "Selected work",
-        lead: "Explore software products and digital experiences built with a focus on usability, performance, and quality.",
-        note: "These cards are a showcase structure. Real project names, images, and links can replace them when available.",
+        lead: "Interactive frontend prototypes that show the kind of product experience Kodama can design and build.",
+        note: "These are Kodama’s own UI prototypes with mock data. They are not client projects, and nothing here is a live service.",
+        empty: "No prototypes in this category yet.",
         filterAll: "All",
         filterMobile: "Mobile",
         filterWeb: "Web",
@@ -243,7 +264,19 @@ window.KodamaI18n = {
         },
         projects: {
           title: "Kodama | المشاريع",
-          description: "تعرّف على منتجات برمجية وتجارب رقمية من Kodama، بتركيز على سهولة الاستخدام والأداء والجودة."
+          description: "نماذج واجهات تفاعلية من Kodama لمطعم وتوصيل ومحاسبة. بيانات تجريبية، وليست مشاريع عملاء."
+        },
+        restaurant: {
+          title: "Kodama | عرض تطبيق المطعم",
+          description: "نموذج واجهة تفاعلي لتطبيق طلب طعام من Kodama. قائمة وسلة تجريبية فقط — ليس منتجاً يعمل فعلياً."
+        },
+        delivery: {
+          title: "Kodama | عرض تطبيق التوصيل",
+          description: "نموذج واجهة تفاعلي لتطبيق توصيل من Kodama، مع تتبّع طلب محاكى. ليست خدمة حقيقية."
+        },
+        accounting: {
+          title: "Kodama | عرض تطبيق المحاسبة",
+          description: "نموذج واجهة تفاعلي للوحة محاسبة من Kodama. بيانات أعمال تجريبية فقط — ليس نظاماً حياً."
         },
         about: {
           title: "Kodama | من نحن",
@@ -299,7 +332,7 @@ window.KodamaI18n = {
         exploreServices: "استكشف خدماتنا",
         workEyebrow: "الأعمال",
         workTitle: "أعمال مختارة",
-        workCopy: "مجموعة من المنتجات الرقمية والتجارب البرمجية التي بناها Kodama.",
+        workCopy: "نماذج واجهات تفاعلية تُظهر نوع تجارب المنتجات التي يستطيع Kodama تصميمها وبنائها.",
         viewProjects: "عرض كل المشاريع",
         whyEyebrow: "الشركة",
         whyTitle: "نُبنى بقصد.",
@@ -332,18 +365,26 @@ window.KodamaI18n = {
         catMobile: "تطبيق جوال",
         catWeb: "منصة ويب",
         catSoftware: "برمجيات أعمال",
-        s1Title: "عرض 01",
-        s1Copy: "نموذج لتطبيق جوال يركز على الوضوح والأداء والاستخدام اليومي.",
-        s2Title: "عرض 02",
-        s2Copy: "نموذج لمنصة ويب منظمة حول المحتوى والسرعة وأهداف العمل.",
-        s3Title: "عرض 03",
-        s3Copy: "نموذج لبرمجيات داخلية مصممة حول سير العمل والبيانات والموثوقية.",
-        s4Title: "عرض 04",
-        s4Copy: "نموذج ثانٍ لتطبيق جوال، جاهز للاستبدال بمشروع حقيقي لاحقاً.",
-        s5Title: "عرض 05",
-        s5Copy: "نموذج لموقع تعريفي أو منتج بهيكل هادئ ومنظم.",
-        s6Title: "عرض 06",
-        s6Copy: "نموذج لأداة تشغيل أو إدارة يمكن توثيقها لاحقاً."
+        badge: "عرض تفاعلي",
+        frontend: "نموذج واجهة",
+        explore: "استكشف العرض",
+        restaurantCat: "تجربة مطعم وطعام",
+        restaurantTitle: "تطبيق المطعم",
+        restaurantCopy: "نموذج طلب عبر الجوال: تصفّح القائمة، عدّل الكميات، وأكّد طلباً تجريبياً.",
+        deliveryCat: "تجربة توصيل من عدة متاجر",
+        deliveryTitle: "تطبيق التوصيل",
+        deliveryCopy: "نموذج توصيل للجوال مع تصفّح المتاجر وسلة وتتبع طلب محاكى.",
+        accountingCat: "لوحة إدارة الأعمال",
+        accountingTitle: "تطبيق المحاسبة",
+        accountingCopy: "نموذج لوحة لسطح المكتب للمبيعات والمخزون والعملاء والتقارير، ببيانات تجريبية."
+      },
+      demo: {
+        back: "العودة إلى Kodama",
+        kicker: "نموذج Kodama",
+        kind: "عرض واجهة تفاعلي",
+        restaurantNote: "نموذج لطلب الطعام. أطباق وأسعار تجريبية فقط — لا يُرسل أي طلب ولا يتم الدفع.",
+        deliveryNote: "نموذج توصيل مع تتبّع محاكى. لا توجد خريطة حية أو مندوب أو دفع.",
+        accountingNote: "نموذج لوحة محاسبة. الأرقام بيانات تجريبية لشركة وهمية."
       },
       servicesPage: {
         eyebrow: "الخدمات",
@@ -389,8 +430,9 @@ window.KodamaI18n = {
       projectsPage: {
         eyebrow: "المشاريع",
         title: "أعمال مختارة",
-        lead: "استكشف منتجات برمجية وتجارب رقمية بُنيت بتركيز على سهولة الاستخدام والأداء والجودة.",
-        note: "هذه البطاقات هيكل عرض. يمكن استبدال الأسماء والصور والروابط بمشاريع حقيقية عند توفرها.",
+        lead: "نماذج واجهات تفاعلية تُظهر نوع تجربة المنتج التي يستطيع Kodama تصميمها وبنائها.",
+        note: "هذه نماذج واجهة خاصة بـ Kodama وبياناتها تجريبية. ليست مشاريع عملاء، ولا توجد هنا خدمة حقيقية.",
+        empty: "لا توجد نماذج في هذا التصنيف بعد.",
         filterAll: "الكل",
         filterMobile: "تطبيقات",
         filterWeb: "ويب",

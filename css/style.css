@@ -788,6 +788,25 @@ ol {
   display: none;
 }
 
+.project-actions {
+  margin-top: 1.05rem;
+}
+
+.project-explore {
+  width: 100%;
+  min-height: 42px;
+  padding: 0.55rem 1rem;
+}
+
+.filter-empty {
+  margin: -0.35rem 0 1.25rem;
+  color: var(--color-text-secondary);
+}
+
+.filter-empty[hidden] {
+  display: none;
+}
+
 /* Filters */
 
 .filters {

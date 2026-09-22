@@ -124,10 +124,6 @@
     flex-shrink: 0;
   }
 
-  [dir="rtl"] .nav-panel {
-    transform: none;
-  }
-
   .nav-actions {
     flex-shrink: 0;
   }

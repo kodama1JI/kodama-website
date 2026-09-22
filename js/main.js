@@ -90,6 +90,7 @@
       localStorage.setItem(LANG_KEY, next);
     } catch (e) {}
     applyI18n();
+    window.scrollTo(0, window.scrollY || 0);
   }
 
   function setTheme(theme) {
